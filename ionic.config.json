@@ -1,0 +1,7 @@
+{
+  "name": "fw-react-auto-focus-input",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
