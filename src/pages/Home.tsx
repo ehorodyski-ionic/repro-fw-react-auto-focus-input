@@ -58,7 +58,7 @@ export class HomeClassComponent extends Component<{}, HomeState> {
                 }
               />
             </IonItem>
-            <IonButton expand="full">Test</IonButton>
+            <IonButton expand="full">Test (Class Component)</IonButton>
           </form>
           <div>{this.state && this.state.username}</div>
           <div>{this.state && this.state.password}</div>
@@ -101,7 +101,7 @@ const Home: React.FC = () => {
               onIonChange={(e) => setPassword(e.detail.value!)}
             />
           </IonItem>
-          <IonButton expand="full">Test</IonButton>
+          <IonButton expand="full">Test (Functional Component)</IonButton>
         </form>
         <div>{username}</div>
         <div>{password}</div>
