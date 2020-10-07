@@ -1,7 +1,17 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import React from 'react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Home.css';
+import {
+  IonButton,
+  IonContent,
+  IonHeader,
+  IonInput,
+  IonPage,
+  IonTitle,
+  IonToolbar,
+  IonItem,
+  IonLabel,
+} from "@ionic/react";
+import React from "react";
+import AutoFocusInput from "../components/AutoFocusInput";
+import "./Home.css";
 
 const Home: React.FC = () => {
   return (
@@ -17,7 +27,20 @@ const Home: React.FC = () => {
             <IonTitle size="large">Blank</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer />
+        <form>
+          <IonItem>
+            <IonLabel position="stacked">Username</IonLabel>
+            <AutoFocusInput
+              type="text"
+              onIonChange={(e: any) => console.log(e.detail.value)}
+            />
+          </IonItem>
+          <IonItem>
+            <IonLabel position="stacked">Password</IonLabel>
+            <IonInput type="password" />
+          </IonItem>
+          <IonButton expand="full">Test</IonButton>
+        </form>
       </IonContent>
     </IonPage>
   );
