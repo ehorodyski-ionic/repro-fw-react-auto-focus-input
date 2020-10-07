@@ -8,7 +8,7 @@ const AutoFocusInput: React.FC<any> = ({ ...props }) => {
     setTimeout(() => autoFocus?.current?.setFocus(), 300);
   }, [autoFocus]);
 
-  return <IonInput ref={autoFocus} {...props} />;
+  return <IonInput autofocus {...props} />;
 };
 
 export default AutoFocusInput;
